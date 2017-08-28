@@ -1,0 +1,19 @@
+{
+  "name": "flashcard_generator",
+  "version": "1.0.0",
+  "description": "Cloze Constructors: A basic Flashcard Application",
+  "main": "CLI.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/willieching11/Flashcard-Generator.git"
+  },
+  "author": "Willie Ching",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/willieching11/Flashcard-Generator/issues"
+  },
+  "homepage": "https://github.com/willieching11/Flashcard-Generator#readme"
+}
