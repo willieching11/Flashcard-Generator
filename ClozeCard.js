@@ -44,9 +44,20 @@ var start = {
 		        if (count === undefined) {
 			    	console.log(cards);
 			    } else {
-                    console.log("Text: " + cards[count-1].text);
-                    console.log("Cloze: " + cards[count-1].cloze);
-                    console.log("Partial: " + cards[count-1].partial);
+			    	if (cardType === undefined) {
+	                    console.log("Text: " + cards[count-1].text);
+	                    console.log("Cloze: " + cards[count-1].cloze);
+	                    console.log("Partial: " + cards[count-1].partial);
+                	}
+                	else if (cardType === "text") {
+                		console.log("Text: " + cards[count-1].text);
+                	}
+                	else if (cardType === "cloze") {
+                		console.log("Cloze: " + cards[count-1].cloze);
+                	}
+                	else if (cardType === "partial") {
+                		console.log("Partial: " + cards[count-1].partial);
+                	}
 			    }
 			} else if (action === "add") {
 				start.createCards();

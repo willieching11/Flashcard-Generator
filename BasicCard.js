@@ -2,6 +2,7 @@ var fs = require("fs");
 
 var action = process.argv[3];
 var count = process.argv[4];
+var cardType = process.argv[5];
 
 function BasicCard(front, back) {
 	this.front = front;
@@ -39,8 +40,16 @@ var start = {
 		        if (count === undefined) {
 			    	console.log(cards);
 			    } else {
-                    console.log("Front: " + cards[count-1].front);
-                    console.log("Back: " + cards[count-1].back);
+			    	if (cardType === undefined) {
+	                    console.log("Front: " + cards[count-1].front);
+	                    console.log("Back: " + cards[count-1].back);
+                	}
+                	else if (cardType === "front") {
+                		console.log("Front: " + cards[count-1].front);
+                	}
+                	else if (cardType === "back") {
+                		console.log("Back: " + cards[count-1].back);
+                	}
 			    }
 			} else if (action === "add") {
 				start.createCards();
